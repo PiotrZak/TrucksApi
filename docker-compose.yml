@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db:
+    build: ./Db
+    ports:
+        - 1433:1433
+    networks:
+      - ERP-System
+  api:
+      build: .
+      ports:
+      # <host-port>:<container-port>
+        - 5235:80
+      depends_on:
+        - db
+      networks:
+        - ERP-System
+
+networks:
+  ERP-System:
+    driver: bridge

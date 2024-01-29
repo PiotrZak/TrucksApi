@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trucks-api-deployment  # Name of the deployment
+spec:
+  replicas: 3  # Number of desired replicas (pods)
+  selector:
+    matchLabels:
+      app: trucks-api  # Label selector to match pods controlled by this deployment
+  template:
+    metadata:
+      labels:
+        app: trucks-api  # Labels applied to pods created by this deployment
+    spec:
+      containers:
+        - name: trucks-api  # Name of the container
+          image: trucks-api:latest  # Docker image to use
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80  # Port to expose within the pod

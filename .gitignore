@@ -1,0 +1,11 @@
+Trucks.API/bin/Debug/
+Trucks.API/obj/
+Trucks.API/Properties
+Trucks.API/bin
+Trucks.API/.vs
+
+Trucks.API.Tests/bin/Debug/
+Trucks.API.Tests/obj/
+Trucks.API.Tests/Properties
+Trucks.API.Tests/bin
+Trucks.API.Tests/.vs
