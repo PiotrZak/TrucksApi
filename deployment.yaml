@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: trucks-api  # Name of the container
-          image: trucks-api:latest  # Docker image to use
-          imagePullPolicy: Never
+          image: pzdesign/trucks-api:latest  # Docker image to use
+          imagePullPolicy: Always
           ports:
             - containerPort: 80  # Port to expose within the pod

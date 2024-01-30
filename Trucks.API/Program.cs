@@ -30,7 +30,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Trucks.API", Version = "v1" });
 });
 
 // Product
@@ -51,4 +51,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 
-app.Run("http://0.0.0.0:80");
+//app.Run("http://0.0.0.0:80");
+app.Run();
